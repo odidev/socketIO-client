@@ -6,6 +6,7 @@ before_install:
 install:
   - pip install -U coverage requests six websocket-client
   - npm install -G socket.io
+  - pip install invisibleroads-macros
 before_script:
   - DEBUG=* node socketIO_client/tests/serve.js &
   - sleep 1
