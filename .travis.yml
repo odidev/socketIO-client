@@ -1,6 +1,11 @@
 language: python
-python:
-  - 3.8
+matrix:
+    include:
+        - python: 3.8
+          dist: bionic
+        - python: 3.8
+          arch: arm64
+          dist: bionic 
 before_install:
   - sudo apt-get install nodejs; node --version
 install:
